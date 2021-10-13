@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+void chp(char *p)
+    {
+        int startp=1,startq=0;
+       char *q;
+        q=(char*)malloc(20*sizeof(char));
+        for(;p[startp]!='\0';startp++,startq++)
+        q[startq]=p[startp];
+        
+        q[startq++]=p[0];
+        q[startq++]='a';
+        q[startq]='\0';
+        
+        printf("\n output is : %s",q);
+    }
+
+int main() 
+{
+    char *str,*str2;
+    str=(char *)malloc(20*sizeof(char));
+    scanf("%s",str);
+    chp(str);
+    printf("%s",str2);
+    return 0;
+}
